@@ -1,0 +1,14 @@
+@mixin monster($name) {
+  background-repeat: no-repeat;
+  background-size: 4*$size;
+  animation: $name steps(4, end) 0.8s infinite;
+}
+
+@mixin animate($name,$y) {
+  0% {
+    background-position: #{0} -$y*$size;
+  }
+  100% {
+    background-position: #{-4*$size} -$y*$size;
+  }
+}

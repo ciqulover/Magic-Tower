@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  height: $size *$gridCount;
+  width: $size*$gridCount;
+  margin: 0 auto;
+}
+

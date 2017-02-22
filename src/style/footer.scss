@@ -1,0 +1,45 @@
+footer {
+  box-sizing: border-box;
+  background: url(../assets/wall.png) repeat;
+  height: 50px;
+  padding: 10px;
+  width: 440px;
+  margin: 0 auto;
+  color: #FFF;
+  letter-spacing: 1px;
+  menu {
+    float: left;
+    box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 6px;
+    > div {
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin: 0 20px;
+    }
+    .homeIcon {
+      background: url("../assets/2-3.png") -0.5*$size #{0} / #{2*$size};
+    }
+    .flyIcon {
+      background: url("../assets/Items-01.png") 0 #{0} / 2*$size;
+    }
+    .bookIcon {
+      background: url("../assets/2-2.png") -1*$size #{-0.5*$size} / #{2*$size};
+    }
+  }
+  > div {
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+}

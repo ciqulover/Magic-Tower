@@ -1,0 +1,13 @@
+%test {
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid white;
+}
+
+%grid {
+  //@extend %test;
+  color: white;
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+}

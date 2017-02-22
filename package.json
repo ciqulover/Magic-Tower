@@ -1,0 +1,24 @@
+{
+  "name": "mt",
+  "version": "1.0.0",
+  "description": "Magic Tower",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline"
+  },
+  "author": "ycwalker",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}

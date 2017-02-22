@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>魔塔</title>
+  <link rel="stylesheet" href="dist/bundle.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div>
+  <div class="home">
+    <div class="title">魔塔RPG</div>
+    <div class="newGame">新游戏</div>
+    <div class="continue">继续游戏</div>
+  </div>
+  <div class="popUp">
+    <div class="message"></div>
+  </div>
+  <div class="container">
+    <header>
+      <div class="row1">
+        <div class="character"></div>
+        <div class="life">生命：{{life}}</div>
+        <div class="money">金币：{{money}}</div>
+        <div class="attack">攻击：{{attack}}</div>
+        <div class="experience">经验：{{exp}}</div>
+        <div class="defence">防御：{{defence}}</div>
+        <div class="playerLevel">等级：{{playerLevel}}</div>
+      </div>
+      <div class="row2">
+        <div class="keys">
+          <div class="yellowKeys">{{yellowKeys}}</div>
+          <div class="blueKeys">{{blueKeys}}</div>
+          <div class="redKeys">{{redKeys}}</div>
+        </div>
+        <div class="level">高度：{{level}}/21</div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <menu>
+        <div class="homeIcon"></div>
+        <div class="flyIcon"></div>
+        <div class="bookIcon"></div>
+      </menu>
+      <div class="save">保存</div>
+    </footer>
+    <div class="prepareFight">
+      <h1>准备战斗</h1>
+      <div class="info">
+        <div class="left"></div>
+        <div class="right">
+          <div class="name">名称：{{name}}</div>
+          <div class="life">生命：{{life}}</div>
+          <div class="attack">攻击：{{attack}}</div>
+          <div class="defence">防御：{{defence}}</div>
+          <div class="money">金币：{{money}}</div>
+          <div class="experience">经验：{{exp}}</div>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="goFighting">打它</div>
+        <div class="stopFighting">离开</div>
+      </div>
+    </div>
+    <div class="book"></div>
+    <div class="fly">
+      <div class="levels"></div>
+      <div class="thumbnail"></div>
+      <div class="goFloor">使用</div>
+    </div>
+
+    <!--<div class="fighting">-->
+    <!--<h1>战斗中</h1>-->
+    <!--</div>-->
+
+  </div>
+</div>
+<script src="dist/bundle.js"></script>
+<script>
+
+
+  //  function toggleFullScreen() {
+  //    var doc = window.document;
+  //    var docEl = doc.documentElement;
+  //
+  //    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  //    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  //
+  //    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+  //      requestFullScreen.call(docEl);
+  //    }
+  //    else {
+  //      cancelFullScreen.call(doc);
+  //    }
+  //  }
+  //  document.body.addEventListener('click',toggleFullScreen)
+</script>
+</body>
+</html>

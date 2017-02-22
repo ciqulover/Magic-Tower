@@ -1,0 +1,46 @@
+.prepareFight {
+  display: none;
+  box-sizing: border-box;
+  padding-top: 40px;
+  position: absolute;
+  width: 440px;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 440px;
+  color: #FFF;
+  h1 {
+    text-align: center;
+  }
+  .info {
+    padding-top: 20px;
+    overflow: hidden;
+    .left {
+      float: left;
+      padding: 40px 40px 80px 80px;
+      box-sizing: border-box;
+      width: 160px;
+      height: 160px;
+    }
+    .right {
+      box-sizing: border-box;
+      float: left;
+      padding-left: 40px;
+      width: 280px;
+      height: 160px;
+    }
+  }
+  .buttons {
+    text-align: center;
+    > div {
+      cursor: pointer;
+      display: inline-block;
+      padding: 4px 10px;
+      background: blueviolet;
+      border-radius: 6px;
+      margin: 20px;
+    }
+  }
+
+}

@@ -1,0 +1,72 @@
+%pseudo {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  content: '';
+}
+
+header {
+  box-sizing: border-box;
+  background: url(../assets/wall.png) repeat;
+  height: 160px;
+  width: 440px;
+  margin: 0 auto;
+  color: #FFF;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  .row1 {
+    overflow: hidden;
+    > div {
+      float: left;
+      width: 140px;
+      height: 20px;
+      margin: 4px 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+      font-size: 15px;
+      padding: 0 10px;
+    }
+    > div.character {
+      box-sizing: border-box;
+      padding: 0;
+      width: 40px;
+      height: 60px;
+      margin: 10px 20px;
+      background: url("../assets/braver-06.png") no-repeat 0 #{0} / 160px 240px;
+    }
+  }
+  .row2 {
+    overflow: hidden;
+    margin: 20px 0;
+    .keys, .level {
+      float: left;
+      height: 24px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+    }
+    .level{
+      padding: 0 10px;
+      margin-left: 22px;
+    }
+    .keys > div {
+      width: 43px;
+      padding-left: 40px;
+      position: relative;
+      float: left;
+      &.yellowKeys:after {
+        @extend %pseudo;
+        background: url("../assets/keys.jpg") no-repeat 0 #{0} / 80px;
+      }
+      &.redKeys:after {
+        @extend %pseudo;
+        background: url("../assets/red-key.jpg") no-repeat 0 #{0} / 20px;
+      }
+      &.blueKeys:after {
+        @extend %pseudo;
+        background: url("../assets/blue-key.jpg") no-repeat 0 #{0} / 20px;
+      }
+    }
+  }
+}

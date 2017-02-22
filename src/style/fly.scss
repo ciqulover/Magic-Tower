@@ -1,0 +1,51 @@
+.fly {
+  position: absolute;
+  top: 240px;
+  width: 340px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFF;
+  font-size: 12px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  z-index: 1;
+  .levels {
+    overflow-y: auto;
+    border-radius: 10px;
+    width: 340px;
+    height: 230px;
+    padding-top: 10px;
+    > div {
+      cursor: pointer;
+      box-sizing: border-box;
+      font-size: 16px;
+      letter-spacing: 2px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 18px;
+      width: 80px;
+    }
+  }
+  .thumbnail {
+    width: 440px;
+    height: 440px;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+  }
+  .focus {
+    border: 1px solid #FFF;
+    border-radius: 6px;
+  }
+  .goFloor {
+    cursor: pointer;
+    letter-spacing: 6px;
+    text-align: center;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

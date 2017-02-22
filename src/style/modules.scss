@@ -1,0 +1,66 @@
+.home {
+  position: absolute;
+  z-index: 2;
+  height: 650px;
+  width: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #FFF;
+  top: 0;
+  background: url("../assets/wall.png") repeat;
+  font-size: 30px;
+  .title {
+    margin-top: 100px;
+  }
+  .newGame {
+    cursor: pointer;
+    margin-top: 160px;
+  }
+  .continue {
+    cursor: pointer;
+    margin-top: 30px;
+  }
+}
+
+.popUp {
+  position: absolute;
+  top: 0;
+  height: 650px;
+  width: 440px;
+  z-index: 1;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  .message {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 300px auto 0 auto;
+    width: 200px;
+    div {
+      cursor: pointer;
+      text-align: center;
+      color: chocolate;
+    }
+    div.title {
+      cursor: default;
+      color: white;
+      font-size: 14px;
+    }
+  }
+}
+
+.floor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  overflow: hidden;
+}

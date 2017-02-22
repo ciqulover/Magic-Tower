@@ -1,0 +1,52 @@
+.book {
+  position: absolute;
+  width: 440px;
+  top: 180px;
+  left: 50%;
+  z-index: 1;
+  font-size: 12px;
+  transform: translateX(-50%);
+  .wrapper {
+    width: 340px;
+    height: 380px;
+    margin: 0 auto;
+    padding-top: 20px;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow-y: auto;
+    > div {
+      position: relative;
+      color: #FFF;
+      height: 100px;
+      padding-left: 100px;
+      box-sizing: border-box;
+      letter-spacing: 1px;
+      .creature {
+        position: absolute;
+        left: 20px;
+        top: 0;
+      }
+      .monster-name {
+        text-align: center;
+        width: 80px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      .text {
+        span {
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 0.6);
+          margin: 4px;
+          display: inline-block;
+          min-width: 100px;
+          border-radius: 6px;
+          line-height: 16px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+

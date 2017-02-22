@@ -1,0 +1,39 @@
+$baseGreenBg: url("../assets/2-1.png") no-repeat -3*$size #{-1*$size} / #{$size*4};
+$baseStoneBg: url("../assets/stone-bg.jpg") no-repeat -1*$size #{-2*$size} / #{$size*4};
+
+.base {
+  @extend %grid;
+  float: left;
+}
+
+.wall1 {
+  background: url("../assets/wall.png") repeat;
+}
+
+.tree {
+  background: url("../assets/2-1.png") no-repeat -1*$size #{-1*$size} / #{$size*4}, $baseGreenBg;
+}
+
+.upstairs {
+  background: url("../assets/2-1.png") no-repeat -2*$size #{-3*$size} / #{$size*4};
+}
+
+.downstairs {
+  background: url("../assets/2-1.png") no-repeat -1*$size #{-3*$size} / #{$size*4};
+}
+
+.flower1 {
+  background: url("../assets/2-1.png") no-repeat 0 #{-1*$size} / #{$size*4};
+}
+
+.flower2 {
+  background: url("../assets/2-1.png") no-repeat -2*$size #{-1*$size} / #{$size*4};
+}
+
+.road {
+  background: $baseGreenBg;
+}
+
+.stone {
+  background: $baseStoneBg;
+}

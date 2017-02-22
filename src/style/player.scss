@@ -1,0 +1,57 @@
+.player {
+  @extend %grid;
+  height: $playerHeight;
+  position: absolute;
+  left: 0;
+  top: -($playerHeight - $size);
+  background: url("../assets/braver-06.png") no-repeat;
+  background-size: $size*4;
+  animation-timing-function: steps(4, end);
+  animation-iteration-count: infinite;
+  animation-duration: 0.4s;
+  transition: all 0.3s;
+  transition-timing-function: linear;
+  &.up {
+    background-position: 0 -4.5*$size;
+  }
+  &.upWalking {
+    animation-name: playerUp;
+  }
+  &.down {
+    background-position: 0 0;
+  }
+  &.downWalking {
+    animation-name: playerDown;
+  }
+  &.left {
+    background-position: 0 -1.5*$size;
+  }
+  &.leftWalking {
+    animation-name: playerLeft;
+  }
+  &.right {
+    background-position: 0 -3*$size;
+  }
+  &.rightWalking {
+    animation-name: playerRight;
+  }
+  &.noTransition {
+    transition: none;
+  }
+}
+
+@keyframes playerUp {
+  @include animate(player, 4.5)
+}
+
+@keyframes playerDown {
+  @include animate(player, 0)
+}
+
+@keyframes playerLeft {
+  @include animate(player, 1.5)
+}
+
+@keyframes playerRight {
+  @include animate(player, 3)
+}

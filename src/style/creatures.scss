@@ -1,0 +1,255 @@
+@import "partials/variable";
+@import "partials/mixins";
+
+.creature {
+  @extend %grid;
+  position: absolute;
+}
+
+.yellowDoor {
+  background: url("../assets/yellow-door.jpg") no-repeat 0 #{0} / $size;
+}
+
+.redDoor {
+  background: url("../assets/red-door.jpg") no-repeat 0 #{0} / $size;
+}
+
+.blueDoor {
+  background: url("../assets/blue-door.jpg") no-repeat 0 #{0} / $size;
+}
+
+.yellowKey {
+  background: url("../assets/keys.jpg") no-repeat 0 #{0} / $size*4;
+}
+
+.redKey {
+  background: url("../assets/red-key.jpg") no-repeat 0 #{0} / $size;
+}
+
+.blueKey {
+  background: url("../assets/blue-key.jpg") no-repeat 0 #{0} / $size;
+}
+
+.smallFood {
+  background: url("../assets/2-2.png") no-repeat -1*$size #{-1*$size} / 4*$size;
+}
+
+.bigFood {
+  background: url("../assets/2-2.png") no-repeat 0 #{-1*$size} / 4*$size;
+}
+
+.addAttack {
+  background: url("../assets/jewel.jpg") no-repeat 0 #{0} / 4*$size;
+
+}
+
+.addDefence {
+  background: url("../assets/jewel.jpg") no-repeat 0 #{-1*$size} / 4*$size;
+}
+
+.addAttack10 {
+  background: url("../assets/Items-09.png") no-repeat -2*$size #{-1*$size} / 4*$size;
+}
+
+.addDefence10 {
+  background: url("../assets/jewel.jpg") no-repeat -2*$size #{-2*$size} / 4*$size;
+
+}
+
+.allKey {
+  background: url("../assets/Items-05.png") no-repeat 0 #{-2*$size} / 4*$size;
+}
+
+.levelUp {
+  background: url("../assets/Items-01.png") no-repeat 0 #{0} / 4*$size;
+}
+
+.money300 {
+  background: url("../assets/2-101.png") no-repeat 0 #{0} / 4*$size;
+}
+
+.smallMoneyShop {
+  background: url("../assets/monster-1.jpg") no-repeat 0 #{0} /4*$size;
+}
+
+.smallExpShop {
+  background: url("../assets/monster-1.jpg") no-repeat 0 #{-1*$size} /4*$size;
+}
+
+.realWall {
+  background: url("../assets/walls.png") no-repeat -1*$size #{0} /4*$size;
+}
+
+.ten {
+  background: url("../assets/Items-01.png") no-repeat 0 #{-1*$size} /4*$size;
+}
+
+.h21 {
+  background: url("../assets/NPC-04.png") no-repeat 5px #{0} / 3.2*$size;
+}
+
+.h22, .h23 {
+  background: url("../assets/Braver-07.png") no-repeat 0 #{0} / 4*$size;
+}
+
+.m31 {
+  background-image: url("../assets/Slime-01.png");
+  @include monster(m31);
+}
+
+.m32 {
+  background-image: url("../assets/Slime-01.png");
+  @include monster(m32);
+}
+
+.m33 {
+  background-image: url("../assets/Slime-01.png");
+  @include monster(m33);
+}
+
+.m34 {
+  background-image: url("../assets/Slime-01.png");
+  @include monster(m34);
+}
+
+.m35 {
+  background-image: url("../assets/Slime-02.png");
+  @include monster(m35);
+}
+
+.m36 {
+  background-image: url("../assets/Slime-02.png");
+  @include monster(m36);
+}
+
+.m37 {
+  background-image: url("../assets/Slime-02.png");
+  @include monster(m37);
+}
+
+.m38 {
+  background-image: url("../assets/Slime-02.png");
+  @include monster(m38);
+}
+
+.m39 {
+  background-image: url("../assets/Slime-03.png");
+  @include monster(m39);
+}
+
+.m40 {
+  background-image: url("../assets/Slime-03.png");
+  @include monster(m40);
+}
+
+.m41 {
+  background-image: url("../assets/Slime-05.png");
+  @include monster(m41);
+}
+
+.m42 {
+  background-image: url("../assets/Slime-04.png");
+  @include monster(m42);
+}
+
+.m43 {
+  background-image: url("../assets/Slime-04.png");
+  @include monster(m43);
+}
+
+.m44 {
+  background-image: url("../assets/Slime-04.png");
+  @include monster(m44);
+}
+
+.m45 {
+  background-image: url("../assets/Slime-04.png");
+  @include monster(m45);
+}
+
+.m46 {
+  background-image: url("../assets/Slime-05.png");
+  @include monster(m46);
+}
+
+.m47 {
+  background-image: url("../assets/Slime-05.png");
+  @include monster(m47);
+}
+
+.m48 {
+  background-image: url("../assets/Slime-05.png");
+  @include monster(m48);
+}
+
+@keyframes m31 {
+  @include animate(m31, 3);
+}
+
+@keyframes m32 {
+  @include animate(m32, 2);
+}
+
+@keyframes m33 {
+  @include animate(m33, 1);
+}
+
+@keyframes m34 {
+  @include animate(m34, 0);
+}
+
+@keyframes m35 {
+  @include animate(m35, 0);
+}
+
+@keyframes m36 {
+  @include animate(m36, 1);
+}
+
+@keyframes m37 {
+  @include animate(m37, 2);
+}
+
+@keyframes m38 {
+  @include animate(m38, 3);
+}
+
+@keyframes m39 {
+  @include animate(m39, 1);
+}
+
+@keyframes m40 {
+  @include animate(m40, 2);
+}
+
+@keyframes m41 {
+  @include animate(m41, 3);
+}
+
+@keyframes m42 {
+  @include animate(m42, 0);
+}
+
+@keyframes m43 {
+  @include animate(m43, 1);
+}
+
+@keyframes m44 {
+  @include animate(m44, 2);
+}
+
+@keyframes m45 {
+  @include animate(m45, 3);
+}
+
+@keyframes m46 {
+  @include animate(m46, 0);
+}
+
+@keyframes m47 {
+  @include animate(m47, 1);
+}
+
+@keyframes m48 {
+  @include animate(m48, 2);
+}
