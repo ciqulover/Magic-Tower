@@ -7,7 +7,6 @@ class Book {
 
   constructor() {
     this.node = document.querySelector('.book')
-
   }
 
   show(player: any, monsters: any) {
@@ -17,7 +16,6 @@ class Book {
 
     const wrapper = document.createElement('div')
     wrapper.className = 'wrapper'
-
 
     const monsterPatterns = monsters.map((monster: any) => {
       const creatureEl = document.createElement('div')
@@ -43,7 +41,6 @@ class Book {
       monsterEl.appendChild(text)
       wrapper.appendChild(monsterEl)
 
-
     })
     this.node.appendChild(wrapper)
     this.isShowing = true
@@ -53,7 +50,6 @@ class Book {
     this.node.innerHTML = ''
     this.isShowing = false
   }
-
 
 }
 

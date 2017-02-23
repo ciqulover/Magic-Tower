@@ -66,14 +66,17 @@ class popUp {
 
     this.messageNode.appendChild(fragment)
 
-    this.node.addEventListener('click', (e: any) => {
+    const handler = (e: any) => {
       const target = e.target
       if (target == life) cb('life', 100)
       else if (target == attack) cb('attack', 3)
       else if (target == defence) cb('defence', 3)
       this.hide()
       this.isShopping = false
-    })
+      this.node.removeEventListener('click', handler)
+    }
+
+    this.node.addEventListener('click', handler)
     this.show()
   }
 }

@@ -18,7 +18,6 @@ export class Creature {
   direction: number
   [props: string]: any
 
-
   get index(): number {
     return this.y * this.gridCount + this.x
   }
@@ -68,7 +67,6 @@ export class Creature {
   remove() {
     this.node.parentNode.removeChild(this.node)
   }
-
 }
 
 export class Player extends Creature {

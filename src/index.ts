@@ -215,7 +215,6 @@ function update(property: string, value: any) {
     player[property] = value
     dashboard[property] = value
   }
-
 }
 
 document.addEventListener('keyup', function (e) {
@@ -267,6 +266,7 @@ document.querySelector('.newGame').addEventListener('click', function () {
 })
 
 document.querySelector('.continue').addEventListener('click', function () {
+  if (!player) init()
   home.style.display = 'none'
 })
 

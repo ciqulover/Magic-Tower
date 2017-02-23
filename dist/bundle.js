@@ -293,13 +293,6 @@ class Book {
 
 class DashBoard {
     constructor(dashBoardData) {
-        // this.life = dashBoardData.life
-        // this.money = dashBoardData.money
-        // this.attack = dashBoardData.attack
-        // this.exp = dashBoardData.exp
-        // this.defence = dashBoardData.defence
-        // this.playerLevel = dashBoardData.playerLevel
-        // this.level = dashBoardData.level
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* assign */])(this, dashBoardData);
         this.node = document.querySelector('header');
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mvvm__["a" /* default */])(this.node, this);
@@ -1363,7 +1356,7 @@ class popUp {
         fragment.appendChild(defence);
         fragment.appendChild(life);
         this.messageNode.appendChild(fragment);
-        this.node.addEventListener('click', (e) => {
+        const handler = (e) => {
             const target = e.target;
             if (target == life)
                 cb('life', 100);
@@ -1373,7 +1366,9 @@ class popUp {
                 cb('defence', 3);
             this.hide();
             this.isShopping = false;
-        });
+            this.node.removeEventListener('click', handler);
+        };
+        this.node.addEventListener('click', handler);
         this.show();
     }
 }
@@ -1672,6 +1667,8 @@ document.querySelector('.newGame').addEventListener('click', function () {
     init();
 });
 document.querySelector('.continue').addEventListener('click', function () {
+    if (!player)
+        init();
     home.style.display = 'none';
 });
 document.querySelector('.loadArchive').addEventListener('click', function () {

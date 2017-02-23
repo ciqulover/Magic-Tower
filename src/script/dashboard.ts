@@ -18,14 +18,6 @@ class DashBoard {
 
   constructor(dashBoardData: any) {
 
-    // this.life = dashBoardData.life
-    // this.money = dashBoardData.money
-    // this.attack = dashBoardData.attack
-    // this.exp = dashBoardData.exp
-    // this.defence = dashBoardData.defence
-    // this.playerLevel = dashBoardData.playerLevel
-    // this.level = dashBoardData.level
-
     assign(this, dashBoardData)
 
     this.node = document.querySelector('header')
