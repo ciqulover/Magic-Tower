@@ -623,14 +623,17 @@ footer {
   top: 0;
   background: url(a2375ecc1493fa6fd19b6bf56676b008.png) repeat;
   font-size: 30px; }
+  .home > div {
+    cursor: pointer; }
   .home .title {
+    cursor: default;
     margin-top: 100px; }
   .home .newGame {
-    cursor: pointer;
-    margin-top: 160px; }
+    margin-top: 20px; }
   .home .continue {
-    cursor: pointer;
-    margin-top: 30px; }
+    margin-top: 160px; }
+  .home .loadArchive {
+    margin-top: 20px; }
 
 .popUp {
   position: absolute;

@@ -61,11 +61,9 @@ function checkNext(index: number, level: number) {
   if (type === 11 || type === 12) {
     const newLevel = level + (type == 11 ? -1 : 1)
     const newIndex = data.floors[newLevel][type == 11 ? 'endIndex' : 'startIndex']
-    player.node.classList.add('noTransition')
     if (newLevel > data.highestLevelEverBeen) data.highestLevelEverBeen = newLevel
     update('level', newLevel)
     update('index', newIndex)
-    setTimeout(() => player.node.classList.remove('noTransition'), 100)
     floors.showFloor(newLevel)
     return Promise.resolve(false)
   }
@@ -88,8 +86,16 @@ function checkNext(index: number, level: number) {
     else if (type === 8) update('life', player.life + 500)
     else if (type === 9) update('attack', player.attack + 3)
     else if (type === 10) update('defence', player.defence + 3)
-    else if (type === 13) update('attack', player.attack + 10)
-    else if (type === 14) update('defence', player.defence + 20)
+    else if (type === 13) {
+      popUp.setMessage(['得到攻击之剑，攻击加10'], () => {
+        update('attack', player.attack + 10)
+      })
+    }
+    else if (type === 14) {
+      popUp.setMessage(['得到防御之盾，防御加20'], () => {
+        update('defence', player.defence + 20)
+      })
+    }
     else if (type === 15) update('defence', player.money + 10)
     else if (type === 16) {
       popUp.setMessage(['得到十字架，所有属性提升40%!'], () => {
@@ -135,7 +141,7 @@ function checkNext(index: number, level: number) {
       return false
     })
   }
-
+  // NPC on floor 0
   if (type === 21) {
     const humanData = data.humans[21]
     if (!humanData.talked) {
@@ -151,6 +157,7 @@ function checkNext(index: number, level: number) {
     return Promise.resolve(false)
   }
 
+  // NPC on floor 4
   if (type === 22) {
     const humanData = data.humans[22]
     if (humanData.talked) return Promise.resolve(false)
@@ -163,6 +170,7 @@ function checkNext(index: number, level: number) {
     return Promise.resolve(false)
   }
 
+  // shop
   if (type === 26) {
     if (data.money < 20) {
       popUp.setMessage(data.humans.smallMoneyShop.messages)
@@ -259,8 +267,13 @@ document.querySelector('.newGame').addEventListener('click', function () {
 })
 
 document.querySelector('.continue').addEventListener('click', function () {
+  home.style.display = 'none'
+})
+
+document.querySelector('.loadArchive').addEventListener('click', function () {
   init(JSON.parse(localStorage.getItem('mt')))
 })
+
 
 document.querySelector('.homeIcon').addEventListener('click', function () {
   home.style.display = 'block'

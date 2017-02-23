@@ -799,7 +799,7 @@ class Data {
   _data: any
 
   constructor(archive?: any) {
-    this._data = archive ? archive : data
+    this._data = archive ? archive : JSON.parse(JSON.stringify(data))
   }
 
   removeCreature(level: number, ind: number) {

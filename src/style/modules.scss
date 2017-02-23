@@ -10,16 +10,21 @@
   top: 0;
   background: url("../assets/wall.png") repeat;
   font-size: 30px;
+  > div {
+    cursor: pointer;
+  }
   .title {
+    cursor: default;
     margin-top: 100px;
   }
   .newGame {
-    cursor: pointer;
-    margin-top: 160px;
+    margin-top: 20px;
   }
   .continue {
-    cursor: pointer;
-    margin-top: 30px;
+    margin-top: 160px;
+  }
+  .loadArchive {
+    margin-top: 20px;
   }
 }
 

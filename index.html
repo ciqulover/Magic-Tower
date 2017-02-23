@@ -12,8 +12,9 @@
 <div>
   <div class="home">
     <div class="title">魔塔RPG</div>
-    <div class="newGame">新游戏</div>
     <div class="continue">继续游戏</div>
+    <div class="loadArchive">载入存档</div>
+    <div class="newGame">新游戏</div>
   </div>
   <div class="popUp">
     <div class="message"></div>
@@ -35,7 +36,7 @@
           <div class="blueKeys">{{blueKeys}}</div>
           <div class="redKeys">{{redKeys}}</div>
         </div>
-        <div class="level">高度：{{level}}/21</div>
+        <div class="level">高度：{{level}}/8</div>
       </div>
     </header>
     <main></main>
@@ -71,32 +72,8 @@
       <div class="thumbnail"></div>
       <div class="goFloor">使用</div>
     </div>
-
-    <!--<div class="fighting">-->
-    <!--<h1>战斗中</h1>-->
-    <!--</div>-->
-
   </div>
 </div>
 <script src="dist/bundle.js"></script>
-<script>
-
-
-  //  function toggleFullScreen() {
-  //    var doc = window.document;
-  //    var docEl = doc.documentElement;
-  //
-  //    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-  //    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-  //
-  //    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-  //      requestFullScreen.call(docEl);
-  //    }
-  //    else {
-  //      cancelFullScreen.call(doc);
-  //    }
-  //  }
-  //  document.body.addEventListener('click',toggleFullScreen)
-</script>
 </body>
 </html>

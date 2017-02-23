@@ -19,7 +19,7 @@ class Fly {
 
     const fragment = document.createDocumentFragment()
 
-    this.levels = Array.apply(null, Array(22))
+    this.levels = Array.apply(null, Array(9))
       .map((i: any, j: number) => {
         const div: any = document.createElement('div')
         div.textContent = '第' + j + '层'
